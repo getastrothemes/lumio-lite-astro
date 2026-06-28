@@ -15,7 +15,7 @@
         {
           "enable": true,
           "name": "Mega Menu is only available in the Pro version",
-          "url": "https://lumio-astro.netlify.app"
+          "url": "https://lumio-lite-astro.pages.dev"
         }
       ]
     },
@@ -34,7 +34,7 @@
             {
               "enable": true,
               "name": "Home 01",
-              "url": "https://lumio-astro.netlify.app/",
+              "url": "https://lumio-lite-astro.pages.dev/",
               "weight": 1
             },
             {
@@ -46,7 +46,7 @@
             {
               "enable": true,
               "name": "Home 03",
-              "url": "https://lumio-astro.netlify.app/home-three/",
+              "url": "https://lumio-lite-astro.pages.dev/home-three/",
               "weight": 3
             }
           ]
@@ -60,13 +60,13 @@
             {
               "enable": true,
               "name": "Project",
-              "url": "https://lumio-astro.netlify.app/case-studies/",
+              "url": "https://lumio-lite-astro.pages.dev/case-studies/",
               "weight": 0
             },
             {
               "enable": true,
               "name": "Project Single",
-              "url": "https://lumio-astro.netlify.app/case-studies/custom-slug-case-studies-1/",
+              "url": "https://lumio-lite-astro.pages.dev/case-studies/custom-slug-case-studies-1/",
               "weight": 0
             }
           ]
@@ -80,13 +80,13 @@
             {
               "enable": true,
               "name": "Blog",
-              "url": "https://lumio-astro.netlify.app/blog/",
+              "url": "https://lumio-lite-astro.pages.dev/blog/",
               "weight": 0
             },
             {
               "enable": true,
               "name": "Blog Single",
-              "url": "https://lumio-astro.netlify.app/blog/custom-slug-post-1/",
+              "url": "https://lumio-lite-astro.pages.dev/blog/custom-slug-post-1/",
               "weight": 0
             }
           ]
@@ -114,25 +114,25 @@
         {
           "enable": true,
           "name": "About",
-          "url": "https://lumio-astro.netlify.app/about/",
+          "url": "https://lumio-lite-astro.pages.dev/about/",
           "weight": 0
         },
         {
           "enable": true,
           "name": "Team Member",
-          "url": "https://lumio-astro.netlify.app/team",
+          "url": "https://lumio-lite-astro.pages.dev/team",
           "weight": 0
         },
         {
           "enable": true,
           "name": "Pricing Plan",
-          "url": "https://lumio-astro.netlify.app/pricing/",
+          "url": "https://lumio-lite-astro.pages.dev/pricing/",
           "weight": 0
         },
         {
           "enable": true,
           "name": "FAQ",
-          "url": "https://lumio-astro.netlify.app/faq/",
+          "url": "https://lumio-lite-astro.pages.dev/faq/",
           "weight": 0
         },
         {
@@ -155,7 +155,7 @@
       "enable": true,
       "name": "Components",
       "weight": 3,
-      "url": "https://lumio-astro.netlify.app/components/",
+      "url": "https://lumio-lite-astro.pages.dev/components/",
       "badge": {
         "enable": true,
         "label": "New",

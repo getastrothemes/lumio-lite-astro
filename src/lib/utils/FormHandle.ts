@@ -264,7 +264,7 @@ export const formspreeSubmit = async (
   } catch (error) {
     setMessage(
       error +
-        "! Please use this mail - [lumio-astro-theme@gmail.com](mailto:lumio-astro-theme@gmail.com) to submit a ticket!",
+        "! Please use this mail - [lumio-lite-astro-theme@gmail.com](mailto:lumio-lite-astro-theme@gmail.com) to submit a ticket!",
       false,
       false,
       form,
