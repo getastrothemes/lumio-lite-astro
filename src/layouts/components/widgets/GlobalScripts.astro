@@ -259,11 +259,12 @@
       tasks.push(
         loadDynamicModule(
           "@preline/select",
-          () => import("@preline/select"),
+          () => import("preline/non-auto"),
         ).then((module) => {
           if (!module) return;
-          const { default: HSSelect } = module;
+          const { HSSelect } = module;
           HSSelect.autoInit();
+          (window as any).HSSelect = HSSelect;
         }),
       );
     }
@@ -272,10 +273,10 @@
       tasks.push(
         loadDynamicModule(
           "@preline/overlay",
-          () => import("@preline/overlay"),
+          () => import("preline/non-auto"),
         ).then((module) => {
           if (!module) return;
-          const { default: HSOverlay } = module;
+          const { HSOverlay } = module;
           HSOverlay.autoInit();
         }),
       );
