@@ -1,6 +1,6 @@
 import mdx from "@astrojs/mdx";
 import remarkToc from "remark-toc";
-import AutoImport from "astro-auto-import";
+import { unified } from "@astrojs/markdown-remark";
 import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
@@ -42,38 +42,35 @@ export default defineConfig({
 
   integrations: [
     sitemapConfig.enable ? sitemap() : null,
-    AutoImport({
-      imports: [
-        "@/shortcodes/ImageList.astro",
-        "@/shortcodes/ImageItem.astro",
-        "@/shortcodes/InfoBlockItem.astro",
-        "@/shortcodes/InfoBlockList.astro",
-      ],
-    }),
+    // Shortcodes are provided to MDX via the `components` prop on `<Content />`
+    // (see `src/lib/shortcodes.ts`), so no auto-import integration is needed.
     mdx(),
   ],
 
   markdown: {
-    rehypePlugins: [
-      [
-        rehypeExternalLinks,
-        {
-          rel: "noopener noreferrer nofollow",
-          target: "_blank",
-        },
+    // Since @astrojs/mdx v6, remark/rehype plugins are configured on the
+    // `unified()` processor instead of top-level `markdown.*` options.
+    processor: unified({
+      remarkPlugins: [
+        remarkParseContent, // Parse markdown content and add classes in heading and  to images
+        remarkToc,
       ],
-    ],
-    remarkPlugins: [
-      remarkParseContent, // Parse markdown content and add classes in heading and  to images
-      remarkToc,
-    ],
+      rehypePlugins: [
+        [
+          rehypeExternalLinks,
+          {
+            rel: "noopener noreferrer nofollow",
+            target: "_blank",
+          },
+        ],
+      ],
+    }),
 
     // Code Highlighter https://github.com/shikijs/shiki
     shikiConfig: {
       theme: "light-plus", // https://shiki.style/themes
       wrap: false,
     },
-    extendDefaultPlugins: true,
   },
 
   vite: {

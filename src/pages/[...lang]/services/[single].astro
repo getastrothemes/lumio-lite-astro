@@ -8,6 +8,7 @@ import { render } from "astro:content";
 import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
 import ContactSection from "@/components/sections/ContactSection.astro";
 import PageHeader from "@/components/widgets/PageHeader.astro";
+import { shortcodes } from "@/lib/shortcodes";
 
 export async function getStaticPaths() {
   const paths = await Promise.all(
@@ -56,7 +57,7 @@ const { Content } = await render(service);
   <section>
     <div class="relative container">
       <div class="prose-styles content has-video-modal">
-        <Content components={{ img: OptimizedImage }} />
+        <Content components={{ ...shortcodes, img: OptimizedImage }} />
       </div>
     </div>
   </section>
