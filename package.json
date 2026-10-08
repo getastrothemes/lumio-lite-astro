@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.1.0",
   "author": "getastrothemes",
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "MIT",
   "private": true,
   "keywords": [
     "astro",
