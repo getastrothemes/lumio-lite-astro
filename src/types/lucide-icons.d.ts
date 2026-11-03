@@ -1,4 +1,4 @@
-declare module "lucide/dist/esm/icons/*.js" {
+declare module "lucide/dist/esm/icons/*.mjs" {
   type IconNode = [
     "path" | "polyline" | "polygon" | "line" | "circle" | "rect",
     Record<string, string | number>,
